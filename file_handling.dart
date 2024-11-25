@@ -1,19 +1,15 @@
 import 'dart:io';
 
 void main() {
-  // Read from file
   try {
-    String contents = File('input.txt').readAsStringSync();
-    print('File Contents: $contents');
-  } catch (e) {
-    print('Error: $e');
-  }
+    // Write to a file
+    File file = File('output.txt');
+    file.writeAsStringSync('Hello, Dart File Handling!');
 
-  // Write to file
-  try {
-    File('output.txt').writeAsStringSync('This is a new line of text.');
-    print('Data written to file.');
+    // Read from a file
+    String content = file.readAsStringSync();
+    print("File Content: $content");
   } catch (e) {
-    print('Error: $e');
+    print("An error occurred: $e");
   }
 }

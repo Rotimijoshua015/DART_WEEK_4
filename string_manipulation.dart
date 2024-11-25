@@ -1,30 +1,25 @@
 void main() {
-  String str1 = "Hello";
-  String str2 = "World";
+  String firstName = "John";
+  String lastName = "Doe";
 
-  // String Concatenation
-  String concatenated = str1 + " " + str2;
-  print("Concatenated: $concatenated");
+  // Concatenation
+  String fullName = firstName + " " + lastName;
+  print("Concatenated: $fullName");
 
-  // String Interpolation
-  String interpolated = "$str1, $str2!";
-  print("Interpolated: $interpolated");
+  // Interpolation
+  print("Interpolated: My name is $fullName");
 
-  // Substring Extraction
-  String substring = str1.substring(1, 4);
-  print("Substring: $substring");
+  // Substring extraction
+  print("Substring: ${fullName.substring(0, 4)}");
 
-  // Case Conversion
-  String upper = str1.toUpperCase();
-  String lower = str2.toLowerCase();
-  print("Uppercase: $upper");
-  print("Lowercase: $lower");
+  // Case conversion
+  print("Uppercase: ${fullName.toUpperCase()}");
+  print("Lowercase: ${fullName.toLowerCase()}");
 
-  // Reverse String
-  String reversed = str1.split('').reversed.join('');
+  // Reverse string
+  String reversed = fullName.split('').reversed.join();
   print("Reversed: $reversed");
 
-  // String Length
-  int length = str1.length;
-  print("Length: $length");
+  // Length of string
+  print("Length: ${fullName.length}");
 }

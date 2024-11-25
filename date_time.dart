@@ -1,22 +1,16 @@
 void main() {
-  // Current date and time
   DateTime now = DateTime.now();
-  print('Current Date and Time: $now');
+  print("Current DateTime: $now");
 
-  // Formatting Date
-  print('Formatted Date: ${now.day}-${now.month}-${now.year}');
+  DateTime future = now.add(Duration(days: 5));
+  print("Future Date: $future");
 
-  // Parsing Date
-  DateTime parsedDate = DateTime.parse('2023-11-20');
-  print('Parsed Date: $parsedDate');
+  DateTime past = now.subtract(Duration(days: 5));
+  print("Past Date: $past");
 
-  // Date Manipulation
-  DateTime futureDate = now.add(Duration(days: 10));
-  DateTime pastDate = now.subtract(Duration(days: 10));
-  print('Future Date: $futureDate');
-  print('Past Date: $pastDate');
+  Duration difference = future.difference(now);
+  print("Difference in Days: ${difference.inDays}");
 
-  // Difference Between Dates
-  Duration difference = now.difference(parsedDate);
-  print('Difference: ${difference.inDays} days');
+  String formatted = "${now.year}-${now.month}-${now.day}";
+  print("Formatted Date: $formatted");
 }

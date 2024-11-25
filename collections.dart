@@ -1,25 +1,19 @@
 void main() {
-  // List
-  List<String> fruits = ['Apple', 'Banana', 'Cherry'];
-  fruits.add('Date');
-  fruits.remove('Banana');
-  for (var fruit in fruits) {
-    print(fruit);
-  }
+  // Lists
+  List<String> fruits = ["Apple", "Banana", "Cherry"];
+  fruits.add("Mango");
+  fruits.remove("Banana");
+  print("List: $fruits");
 
-  // Set
-  Set<int> numbers = {1, 2, 3, 4, 5};
-  numbers.add(6);
+  // Sets
+  Set<int> numbers = {1, 2, 3, 3, 4};
+  numbers.add(5);
   numbers.remove(2);
-  for (var number in numbers) {
-    print(number);
-  }
+  print("Set: $numbers");
 
-  // Map
-  Map<String, int> scores = {'Alice': 90, 'Bob': 85, 'Charlie': 95};
-  scores['David'] = 88;
-  scores.remove('Bob');
-  scores.forEach((name, score) {
-    print('$name: $score');
-  });
+  // Maps
+  Map<String, int> prices = {"Apple": 100, "Banana": 50};
+  prices["Cherry"] = 200;
+  prices.remove("Banana");
+  print("Map: $prices");
 }
